@@ -20,4 +20,4 @@ jobs:
         python-version: 3.10
 
     - name: Run all_ok.py
-      run: python all_ok.py
+      run: python sample.py
