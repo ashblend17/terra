@@ -1,23 +1,23 @@
-name: Python CI
+name: CI for All OK Script
 
 on:
   push:
-    paths:
-      - '**.py'
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.10
+    - name: Checkout repository
+      uses: actions/checkout@v3
 
-      - name: Install boto3
-        run: pip install boto3
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.10
 
-      - name: Run script
-        run: python s3.py
+    - name: Run all_ok.py
+      run: python all_ok.py
