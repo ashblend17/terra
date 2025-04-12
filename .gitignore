@@ -1,0 +1,25 @@
+# Ignore Terraform state files
+*.tfstate
+*.tfstate.backup
+*.tfvars
+
+# Sensitive files
+*.pem
+*.key
+*.pub
+credentials
+.aws/
+
+# Crash logs
+crash.log
+*.log
+
+# Terraform hidden folder
+.terraform/
+
+# Editor junk
+*.swp
+*.swo
+*.DS_Store
+.vscode/
+.idea/
